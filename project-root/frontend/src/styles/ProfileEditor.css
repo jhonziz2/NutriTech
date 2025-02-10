@@ -1,0 +1,141 @@
+.profile-editor-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-editor-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.form-group input {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.disabled-input {
+  background-color: #f7fafc;
+  cursor: not-allowed;
+}
+
+.submit-button {
+  background-color: #48bb78;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #38a169;
+}
+
+.submit-button:disabled {
+  background-color: #9ae6b4;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #e53e3e;
+  background-color: #fff5f5;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.success-message {
+  color: #38a169;
+  background-color: #f0fff4;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  flex: 1;
+  padding-right: 40px; /* Espacio para el botón */
+}
+
+.password-toggle-button {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4a5568;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle-button:hover {
+  color: #2d3748;
+}
+
+.password-toggle-button:disabled {
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.password-toggle-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.password-tips {
+  margin-top: 8px;
+  padding-left: 0;
+}
+
+.password-tips li {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.password-tips li span {
+  color: #e53e3e;
+} 

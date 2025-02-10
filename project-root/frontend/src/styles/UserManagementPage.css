@@ -1,0 +1,426 @@
+/* Estilos generales */
+.user-management-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+}
+
+h1, h2 {
+  color: #2c3442;
+}
+
+/* Estilo de los botones comunes */
+.submit-button, .edit-button, .delete-button, .cancel-button, .new-user-button, .confirm-button, .boton-config-token {
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.submit-button {
+  background-color: #3b4961;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #2c3442;
+}
+
+.edit-button {
+  background-color: #606d81;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #4a5568;
+}
+
+.delete-button {
+  background-color: #d9534f;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #b52a27;
+}
+
+.cancel-button {
+  background-color: #9ca3af;
+  color: black;
+}
+
+.cancel-button:hover {
+  opacity: 0.8;
+}
+
+.confirm-button {
+  background-color: #3b4961;
+  color: white;
+}
+
+.new-user-button {
+  background-color: #3b4961;
+  color: white;
+}
+
+.new-user-button:hover {
+  background-color: #2c3442;
+}
+
+/* Mensaje de error */
+.error-message {
+  color: #d9534f;
+  margin-bottom: 20px;
+}
+
+/* Estilo de la tabla */
+.user-table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.user-table th, .user-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #3b4961;
+  color: white;
+}
+
+/* Mantener la cabecera de la tabla fija */
+.user-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #3b4961;
+}
+
+/* Estilizar la barra de desplazamiento */
+.user-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.user-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.user-table-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.user-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Estilo del formulario */
+.user-form .form-group {
+  margin-bottom: 10px;
+}
+
+/* Estilos del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #2c3442;
+}
+
+.modal-content .form-group {
+  margin-bottom: 15px;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Botones dentro del modal */
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modal-content .submit-button {
+  background-color: #3b4961;
+  color: white;
+}
+
+.modal-content .submit-button:hover {
+  background-color: #2c3442;
+}
+
+.modal-content .cancel-button {
+  background-color: #d9534f;
+  color: white;
+}
+
+.modal-content .cancel-button:hover {
+  opacity: 0.8;
+}
+
+.user-management-page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #f5f7fa;
+}
+
+.user-management-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Restablecer márgenes y rellenos para todo el documento */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Asegurarse de que el body ocupe todo el alto y ancho */
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo de tu encabezado */
+.header {
+  width: 100%;
+  background-color: #2c3442;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Estilo para los modales */
+.password-tips {
+  margin-top: 8px;
+  font-size: 0.875rem;
+  color: #d9534f;
+}
+
+.password-tips ul {
+  margin-top: 4px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.input-error {
+  color: #d9534f;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+input.error {
+  border-color: #d9534f !important;
+}
+
+input.error:focus {
+  box-shadow: 0 0 0 0.25rem rgba(213, 83, 79, 0.25) !important;
+}
+
+.error {
+  border-color: #d9534f;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.boton-config-token {
+  background-color: #4a5568;
+  color: white;
+  
+}
+
+.boton-config-token:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Modificar los estilos de la sección de búsqueda */
+.search-section {
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between; /* Esto ayudará a separar los elementos */
+  align-items: center;
+}
+
+.search-input {
+  flex: 1; /* El input ocupará el espacio disponible */
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 1rem; /* Espacio entre el input y el select */
+}
+
+.search-type-select {
+  width: 150px; /* Ancho fijo para el select */
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search-input:focus,
+.search-type-select:focus {
+  outline: none;
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Estilos para los botones de acción */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.new-user-button,
+.boton-config-token {
+  flex: 1;
+  background-color: #3b4961;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 150px;
+}
+
+.new-user-button:hover,
+.boton-config-token:hover {
+  background-color: #2c3442;
+}
+
+.new-user-button:disabled,
+.boton-config-token:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilos para el modal de éxito */
+.success-modal {
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: #48bb78;
+  margin-bottom: 1rem;
+}
+
+.success-modal h3 {
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.success-modal button {
+  min-width: 120px;
+}
+
+/* Agregar estos estilos para la cabecera de ordenamiento */
+.user-table th[onClick] {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: 20px; /* Espacio para la flecha */
+}
+
+.user-table th[onClick]:hover {
+  background-color: #2c3442;
+}
+
+/* Estilo para las flechas de ordenamiento */
+.user-table th[onClick]::after {
+  content: attr(data-arrow);
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+}
+
+/* Mantener los estilos existentes de la tabla pero ajustar el padding */
+.user-table th {
+  padding: 12px 15px;
+  background-color: #3b4961;
+  color: white;
+  font-weight: 500;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
